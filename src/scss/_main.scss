@@ -11,8 +11,13 @@ html {
 body {
   height: 100vh;
   margin: 0;
-  background: url("../img/bg.jpg") no-repeat fixed center/cover;
+  background-image: url("../img/bg.jpg");
+  background-image: image-set(url("../img/bg.webp") 1x);
   font-family: var(--font-family-main);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .container {
@@ -36,7 +41,7 @@ body {
   color: var(--color-blue-cue);
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .sub-title {
@@ -50,6 +55,11 @@ body {
 }
 
 @include breakpoint(tablet) {
+  body {
+    background-image: url("../img/bg-tb.jpg");
+    background-image: image-set(url("../img/bg-tb.webp") 1x);
+  }
+
   .title {
     font-size: rem(28);
     font-family: var(--font-family-title);
@@ -61,6 +71,11 @@ body {
 }
 
 @include breakpoint(mobile) {
+  body {
+    background-image: url("../img/bg-mb.jpg");
+    background-image: image-set(url("../img/bg-mb.webp") 1x);
+  }
+
   .container {
     padding: 0 rem(5);
   }
