@@ -194,8 +194,19 @@
 
 @include breakpoint(mobile) {
   .slider-form {
-    width: rem(360);
+    width: 100%;
+    max-width: rem(360);
     margin-top: rem(50);
+  }
+
+  .slider-form__fieldset {
+    width: 100%;
+  }
+
+  .slider-form__input {
+    width: 100%;
+    margin: 0;
+    font-size: rem(14);
   }
 
   .slider-form__btn {
