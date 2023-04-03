@@ -88,3 +88,15 @@
 .dropdown__opened::before {
   transform: rotateX(180deg) translateY(rem(8));
 }
+
+@include breakpoint(mobile) {
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown__input,
+  .dropdown__option {
+    font-size: rem(14);
+  }
+
+}

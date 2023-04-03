@@ -162,7 +162,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-width: 25rem;
   max-width: 60rem;
   min-height: 100vh;
   margin: auto;
@@ -701,8 +700,19 @@ body {
   }
 
   .slider-form {
-    width: 22.5rem;
+    width: 100%;
+    max-width: 22.5rem;
     margin-top: 3.125rem;
+  }
+
+  .slider-form__fieldset {
+    width: 100%;
+  }
+
+  .slider-form__input {
+    width: 100%;
+    margin: 0;
+    font-size: 0.875rem;
   }
 
   .slider-form__btn {
@@ -716,6 +726,15 @@ body {
   .slider-form__btn--right {
     left: auto;
     right: 0;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown__input,
+  .dropdown__option {
+    font-size: 0.875rem;
   }
 }
 
