@@ -525,6 +525,7 @@ body {
   margin: auto;
   background-color: var(--color-white);
   border-radius: var(--border-radius);
+  z-index: 1;
 }
 
 .dropdown::before {
