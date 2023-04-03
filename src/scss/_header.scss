@@ -1,0 +1,88 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin: rem(30) 0;
+}
+
+.logo__img {
+  display: block;
+}
+
+.login-form {
+  display: flex;
+}
+
+.login-form__wrap {
+  position: relative;
+  margin-right: rem(8);
+}
+
+.login-form__input {
+  @include input-field(200px, 40px);
+  font-size: rem(14);
+  font-weight: bold;
+}
+
+.login-form__validation-error {
+  @include message();
+  top: rem(45);
+  font-size: rem(11);
+  font-weight: bold;
+}
+
+.login-form__forgot-password-link {
+  position: absolute;
+  top: rem(54);
+  left: 1px;
+  font-size: rem(11);
+  font-weight: bold;
+  color: var(--color-white);
+}
+
+.login-form__btn {
+  @include button();
+  padding: 0 rem(20);
+}
+
+@include breakpoint(mobile tablet) {
+  .header {
+    flex-direction: column;
+  }
+}
+
+@include breakpoint(mobile) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-form__wrap {
+    margin-right: 0;
+  }
+
+  .login-form {
+    flex-direction: column;
+  }
+
+  .login-form__input {
+    margin-right: 0;
+    margin-bottom: rem(8);
+  }
+
+  .login-form__validation-error {
+    position: relative;
+    top: 0;
+    margin-bottom: rem(8);
+  }
+
+  .login-form__forgot-password-link {
+    display: block;
+    position: relative;
+    top: 0;
+    margin-bottom: rem(8);
+  }
+}

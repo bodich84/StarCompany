@@ -1,0 +1,26 @@
+:root {
+  --color-white: #fff;
+  --color-blue-cue: #83a6e4;
+  --color-raven-grey: #6e747c;
+  --color-jupiter: #e2e2e2;
+  --color-winter-haven: #e1e6eb80;
+  --color-alizarin-crimson: #e22a32;
+
+  --font-family-main: "Arial", sans-serif;
+  --font-family-second: "Open Sans", sans-serif;
+  --font-family-title: "Proxima Nova", sans-serif;
+  --font-family-title-bold: "Proxima Nova Bold", "Proxima Nova", sans-serif;
+
+  --border-radius: 4px;
+  --border-radius-top: 4px 4px 0 0;
+  --border-radius-bottom: 0 0 4px 4px;
+
+  --blue-liner-gradient: linear-gradient(29deg, #5865ea 0%, #2b9fea 100%);
+  --drop-shadow-blue-filter: drop-shadow(
+    0px 1px 8.5px rgba(43, 160, 234, 0.66)
+  );
+  --green-liner-gradient: linear-gradient(29deg, #4baf4f 0%, #3bd341 100%);
+  --drop-shadow-green-filter: drop-shadow(
+    0px 1px 8.5px rgba(76, 175, 80, 0.66)
+  );
+}

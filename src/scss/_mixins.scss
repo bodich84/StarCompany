@@ -1,0 +1,96 @@
+$media_queries: (
+  "mobile": (
+    max-width: 767px,
+  ),
+  "tablet": unquote("(min-width: 768px) and (max-width: 1024px)"),
+  "laptop": unquote("(min-width: 1025px) and (max-width: 1200px)"),
+  "desktop": (
+    min-width: 1025px,
+  ),
+  "huge": (
+    min-width: 1281px,
+  ),
+);
+
+@mixin breakpoint($breakpoints) {
+  $conditions: ();
+  @each $breakpoint in $breakpoints {
+    $conditions: append(
+      $conditions,
+      #{inspect(map-get($media_queries, $breakpoint))},
+      comma
+    );
+  }
+
+  @media #{$conditions} {
+    @content;
+  }
+}
+
+// @include breakpoint(mobile tablet desktop) {...}
+
+@function rem($value) {
+  $remValue: calc($value / 16) + rem;
+  @return $remValue;
+}
+
+@mixin button($width: "initial", $bg-color: "blue") {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: rem(40);
+  width: $width;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: rem(13);
+  font-weight: bold;
+  color: var(--color-white);
+
+  @if ($bg-color == "blue") {
+    background-image: var(--blue-liner-gradient);
+  } @else if ($bg-color == "green") {
+    background-image: var(--green-liner-gradient);
+  }
+
+  &:hover {
+    @if ($bg-color == "blue") {
+      filter: var(--drop-shadow-blue-filter);
+    } @else if ($bg-color == "green") {
+      filter: var(--drop-shadow-green-filter);
+    }
+  }
+}
+
+@mixin message($background-color: var(--color-alizarin-crimson), $color: var(--color-white)) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  min-height: rem(40);
+  background-color: $background-color;
+  border-radius: var(--border-radius);
+  color: var(--color-white);
+  z-index: 1;
+  animation-name: show;
+  animation-duration: 0.5s;
+}
+
+@mixin input-field($width: "initial", $height: rem(40)) {
+  display: flex;
+  box-sizing: border-box;
+  width: $width;
+  height: $height;
+  padding: 0 rem(15);
+  background-color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: rem(14);
+  font-weight: bold;
+  color: var(--color-raven-grey);
+  &:focus {
+    outline: none;
+  }
+}
