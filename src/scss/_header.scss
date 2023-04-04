@@ -22,7 +22,7 @@
 }
 
 .login-form__input {
-  @include input-field(200px, 40px);
+  @include input-field(rem(200), rem(40));
   font-size: rem(14);
   font-weight: bold;
 }

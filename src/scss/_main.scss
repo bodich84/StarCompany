@@ -2,11 +2,11 @@ html {
   font-size: 16px;
 }
 
-// @include breakpoint(huge) {
-//   html {
-//     font-size: 18px;
-//   }
-// }
+@include breakpoint(huge) {
+  html {
+    font-size: 18px;
+  }
+}
 
 body {
   height: 100vh;
@@ -31,6 +31,7 @@ body {
 
 .main {
   margin: auto;
+  padding: rem(40) 0 rem(80);
 }
 
 .title {
