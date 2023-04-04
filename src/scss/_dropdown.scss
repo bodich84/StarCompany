@@ -27,7 +27,7 @@
   width: 0;
   height: 0;
   transition: all 0.2s linear;
-  border-top: 6px solid var(--color-raven-grey);
+  border-top: rem(6) solid var(--color-raven-grey);
   border-right: rem(6) solid transparent;
   border-bottom: rem(6) solid transparent;
   border-left: rem(6) solid transparent;
@@ -51,7 +51,7 @@
   top: rem(55);
   visibility: hidden;
   opacity: 0;
-  transform: translateY(-50px);
+  transform: translateY(rem(-50));
   overflow: hidden;
   width: 100%;
   padding-bottom: rem(8);
